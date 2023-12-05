@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Taracan implements Runnable {
     String tarakanName;
@@ -9,6 +10,7 @@ public class Taracan implements Runnable {
         this.runCycles = runCycles;
         this.sleepTime = sleepTime;
     }
+
 
     @Override
     public void run() {
@@ -27,5 +29,6 @@ public class Taracan implements Runnable {
 
         TaracanAppl.setWinner(tarakanName);
     }
+
 }
 

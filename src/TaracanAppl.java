@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class TaracanAppl {
     static String winner = null;
@@ -8,7 +9,18 @@ public class TaracanAppl {
     public static void main(String[] args) throws InterruptedException {
         int min = 2;
         int max = 5;
-        int runCycles = 10;
+
+
+        Scanner scanner = new Scanner(System.in);
+
+
+        System.out.print("Enter quantity of taracans: ");
+        int quantTar=scanner.nextInt();
+
+        System.out.print("Enter quantity of runCycles: ");
+        int runCycles = scanner.nextInt();
+
+        scanner.close();
 
         Random random = new Random();
         int sleepTime = min + random.nextInt((max + 1) - min);
@@ -17,7 +29,7 @@ public class TaracanAppl {
 
         List<Thread> threads = new ArrayList<>();
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < quantTar; i++) {
             threads.add(new Thread(new Taracan("Runner #"+i,runCycles,sleepTime)));
         }
 
