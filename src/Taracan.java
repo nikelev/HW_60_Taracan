@@ -11,7 +11,6 @@ public class Taracan implements Runnable {
         this.sleepTime = sleepTime;
     }
 
-
     @Override
     public void run() {
         System.out.println("Tarakan #" + tarakanName + " is running");

@@ -13,7 +13,6 @@ public class TaracanAppl {
 
         Scanner scanner = new Scanner(System.in);
 
-
         System.out.print("Enter quantity of taracans: ");
         int quantTar=scanner.nextInt();
 
