@@ -21,14 +21,15 @@ public class TaracanAppl {
 
         scanner.close();
 
-        Random random = new Random();
-        int sleepTime = min + random.nextInt((max + 1) - min);
+
 
         System.out.println("Tarakans Race START!");
 
         List<Thread> threads = new ArrayList<>();
 
         for (int i = 0; i < quantTar; i++) {
+            Random random = new Random();
+            int sleepTime = min + random.nextInt((max + 1) - min);
             threads.add(new Thread(new Taracan("Runner #"+i,runCycles,sleepTime)));
         }
 
