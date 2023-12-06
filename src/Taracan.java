@@ -14,14 +14,15 @@ public class Taracan implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("Tarakan #" + tarakanName + " is running");
         int min = 2;
         int max = 5;
         Random random = new Random();
         int sleepTime = min + random.nextInt((max + 1) - min);
+        System.out.println("Tarakan #" + tarakanName + " is running"+" SleepTime will= "+sleepTime);
+
 
         for (int i = 0; i < runCycles; i++) {
-            System.out.println("Tarakan #" + tarakanName + " is running round number " + (i + 1)+" SleepTime= "+sleepTime);
+            System.out.println("Tarakan #" + tarakanName + " is running round number " + (i + 1));
 
             try {
                 Thread.sleep(sleepTime);
